@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Problem2 {
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class Problem2 {
                 x[j] = scanner.nextInt();
             }
             modifyArray(a, x);
-            System.out.println(Arrays.toString(a));
+            System.out.println(Arrays.stream(a).mapToObj(String::valueOf).collect(Collectors.joining(" ")));
         }
 
         scanner.close();
