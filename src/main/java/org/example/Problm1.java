@@ -17,10 +17,10 @@ public class Problm1 {
                 a[i] = Integer.parseInt(el[i]);
             }
             if(canBeSorted(a)) {
-                System.out.printf("TRUE\n");
+                System.out.printf("YES\n");
             }
             else {
-                System.out.printf("FALSE\n");
+                System.out.printf("NO\n");
             }
 
         }
@@ -46,7 +46,7 @@ public class Problm1 {
              */
     }
     static boolean canBeSorted(int[] a) {
-            int n = a.length;
+        int n = a.length;
         int m = 2;
 
         while(m * 2 <= n) {
@@ -58,7 +58,7 @@ public class Problm1 {
             }
             m = m * 2;
         }
-        return isArraySorted(a, m* 2, n -1);
+        return isArraySorted(a, m, n -1);
     }
     static boolean isArraySorted(int[] a, int low, int high) {
         int n = high -low + 1;
