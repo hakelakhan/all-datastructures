@@ -53,4 +53,6 @@ Bitset (Bit Array): A data structure that represents a fixed number of bits, oft
 
 Doubly Linked List: A variation of linked lists where each node has links to both the next and previous nodes.
 
-1. How ArrayList contains work. it uses equalsTo right. 
+2. HashMap 
+3. LinkedHashMap
+4. TreeMap
