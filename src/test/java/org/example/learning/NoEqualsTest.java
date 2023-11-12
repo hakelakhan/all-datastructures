@@ -10,7 +10,7 @@ class NoEqualsTest {
 
     @Test
     void getSum() {
-        int actual = NoEquals.getSum(2, 3, Utils.stringtoArray("1 1"), Utils.stringtoArray("1 1 1") );
+        var actual = NoEquals.getSum(2, 3, Utils.stringtoArray("1 1"), Utils.stringtoArray("1 1 1") );
         Assertions.assertEquals(6, actual);
     }
 }

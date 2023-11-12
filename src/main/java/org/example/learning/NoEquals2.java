@@ -1,5 +1,6 @@
 package org.example.learning;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class NoEquals2 {
@@ -22,7 +23,8 @@ public class NoEquals2 {
         int prev = -1;
         int ucnt = 0;
         int dcnt = 0;
-        long sum = 0;
+        //long sum = 0;
+        BigInteger sum = BigInteger.ZERO;
         boolean calc = false;
         while(i < m && j < n) {
             int current;
@@ -44,7 +46,10 @@ public class NoEquals2 {
                 calc = false;
             }
             else {
-                sum += ucnt*dcnt;
+                //sum += ucnt*dcnt;
+                var t1 = new BigInteger(ucnt+"");
+                var t2 = new BigInteger(dcnt+"");
+                sum = sum.add(t1.multiply(t2));
                 calc = true;
                 prev = current;
                 ucnt = isUp ? 1 : 0;
@@ -69,10 +74,13 @@ public class NoEquals2 {
 
         }
         if(!calc) {
-            sum += ucnt*dcnt;
+            var t1 = new BigInteger(ucnt+"");
+            var t2 = new BigInteger(dcnt+"");
+            sum = sum.add(t1.multiply(t2));
+            //sum += ucnt*dcnt;
         }
 
-        System.out.printf("%d", sum);
+        System.out.printf("%s", sum.toString());
     }
 
     private static int[]  readArray(Scanner sc, int n) {
